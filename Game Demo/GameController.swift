@@ -9,6 +9,17 @@
 import UIKit
 
 
+/*
+ 
+ Class: GameController
+ Descripton: GameController is used to setup the series of GameScenes and their relationships to each other
+ Instance Variables
+ scenes:[String:GameScene] - a Dictionary that uses Strings as keys and Games Scenes as values
+ 
+ Methods:
+ func createGame() -  a function that creates the relatonships between the game scense then stores the scenens in the dicitionary for later use.
+ */
+
 class GameController{
     
     var scenes:[String:GameScene] = [:]

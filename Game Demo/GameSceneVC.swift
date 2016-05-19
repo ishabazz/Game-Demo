@@ -27,12 +27,15 @@ class GameSceneVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Make sure that we have a scene
         guard let scene = scene else {return}
         
         //Setup Views with intial info
         
+        //Show the dialog of the scene if it's defined. If it's nil, show an empty String
         dialogueLabel.text = scene.dialog ?? ""
         
+        //Set the button titles from the info in the scenen
         option1Button.setTitle(scene.option1Text ?? "", forState: .Normal)
         option2Button.setTitle(scene.option2Text ?? "", forState: .Normal)
 
@@ -50,6 +53,8 @@ class GameSceneVC: UIViewController {
         option2Button.backgroundColor = UIColor.purpleColor()
         option2Button.layer.cornerRadius = option2Button.frame.size.height / 2
         option2Button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        
+        //Set the options based on info from the scene
         option1 = scene.option1
         option2 = scene.option2
         if option1 == nil{

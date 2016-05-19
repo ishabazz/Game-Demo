@@ -9,7 +9,7 @@
 import Foundation
 
 enum GameScenes:String{
-    
+    //This is a list of Scene Names.
     case scene1
     case scene2
     case scene3
@@ -17,13 +17,23 @@ enum GameScenes:String{
     case scene5
 
     
-    
-    
-    func description()->String{
-        return self.rawValue
-    }
-    
 }
+
+/*
+ 
+ Class: GameScene
+ Descripton: GammeScene is used as the data model for a single scene in the gamge
+ Instance Variables
+ sceneID:String - The unique name of the Scene, liek "Opening" or "Picked up Knife"
+ 
+ option1:GameScene?  - The scene that shoule be loaded of the button on the left is selected
+ option2:GameScene?  - The scene that shoule be loaded of the button on the right is selected
+
+ option1Text:String? - The text shown on the left button
+ option2Text:String? - The text shown on the right button
+ 
+ dialog:String -  The text that the user will see when viewing this scene
+ */
 
 class GameScene{
     
